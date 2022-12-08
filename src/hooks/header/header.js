@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 import Books from '../books/books';
 import Catagories from '../catagories/catagories';
-
+// add navigation and using react router dom to manipulation the pages
 export default function Header() {
   return (
     <Router>
