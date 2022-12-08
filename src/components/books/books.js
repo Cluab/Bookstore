@@ -1,9 +1,11 @@
-import React from "react";
-import Book from "../../hooks/book/book";
+import React from 'react';
+import Book from '../../hooks/book/book';
 
 export default function Books() {
-  return (<>
-  <div>{Book("hello", "book")}</div>
-  <div></div></>
+  return (
+    <>
+      <div><Book title="Atomic habit" author="james lother"/></div>
+      <div />
+    </>
   );
 }

@@ -1,10 +1,10 @@
 
-// import Header from "./components/header/header";
-import Books from "./components/books/books";
+import Header from "./components/header/header";
+
 function App() {
 	return (
 		<><h1>hello</h1> 
-		<Books /></>
+		<Header /></>
 	);
 }
 
