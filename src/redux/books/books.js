@@ -1,8 +1,10 @@
 const ADD = 'add';
 const REMOVE = 'remove';
-
 const initialState = [];
 
+// initializing actions and state
+
+// adding and exporting action creators
 export const addBook = (book) => ({
   type: ADD,
   name: book.name,
@@ -16,6 +18,8 @@ export const removeBook = (book) => ({
   author: book.author,
   id: book.id,
 });
+
+// adding books reducer for handling different actions and exporting it as default
 
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
