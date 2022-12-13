@@ -1,30 +1,32 @@
 const ADD = 'add';
 const REMOVE = 'remove';
+let nextTodoId = -1;
 const initialState = [{
   name: 'Atomic habit',
   author: 'James Clear',
-  id: 1,
+  id: nextTodoId += 1,
 }, {
   name: 'How to Win Friends and Influence People',
   author: 'Dale Carnegie',
-  id: 2,
+  id: nextTodoId += 1,
 }];
 
 // initializing actions and state
 
 // adding and exporting action creators
-export const addBook = (book) => ({
-  type: ADD,
-  name: book.name,
-  author: book.author,
-  id: book.id,
-});
+export const addBook = (book) => {
+  const newBook = {
+    type: ADD,
+    name: book.name,
+    author: book.author,
+    id: nextTodoId += 1,
+  };
+  return newBook;
+};
 
-export const removeBook = (book) => ({
+export const removeBook = (key) => ({
   type: REMOVE,
-  name: book.name,
-  author: book.author,
-  id: book.id,
+  id: key,
 });
 
 // adding books reducer for handling different actions and exporting it as default

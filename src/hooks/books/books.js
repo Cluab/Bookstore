@@ -9,9 +9,10 @@ export default function Books() {
   return (
     <>
       <div>
-        {books.map((book) => (
+        {books.map((book, i) => (
           <Book
             key={book.id}
+            id={i}
             title={book.name}
             author={book.author}
           />
