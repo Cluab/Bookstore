@@ -1,6 +1,14 @@
 const ADD = 'add';
 const REMOVE = 'remove';
-const initialState = [];
+const initialState = [{
+  name: 'Atomic habit',
+  author: 'James Clear',
+  id: 1,
+}, {
+  name: 'How to Win Friends and Influence People',
+  author: 'Dale Carnegie',
+  id: 2,
+}];
 
 // initializing actions and state
 
@@ -33,7 +41,8 @@ const booksReducer = (state = initialState, action) => {
         },
       ];
     case REMOVE:
-      return state.map((book) => book.id === action.id).filter((book) => book.id === action.id);
+      return [...state.slice(0, action.id),
+        ...state.slice(action.id + 1)];
     default:
       return state;
   }
