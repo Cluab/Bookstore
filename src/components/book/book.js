@@ -3,11 +3,16 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../../redux/books/books';
 // import PropType for making sure it is string.isRequired
+// import dispatch and redux action for hook
 
 const Book = (props) => {
   const { title, author, id } = props;
-  const dispatch = useDispatch();
+
   // using discarding for props
+
+  // add dispatch as a const
+  const dispatch = useDispatch();
+
   return (
   // return jsx syntax for displaying in html
     <div id={id}>

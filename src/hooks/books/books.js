@@ -3,9 +3,11 @@ import { useSelector } from 'react-redux';
 import Book from '../../components/book/book';
 import Form from '../../components/form/form';
 // adding the main books page and importing its components for use
-
+// importing useSelectore for using the stored data
 export default function Books() {
+  // consting the data so we can loop though its content
   const books = useSelector((state) => state.books);
+
   return (
     <>
       <div>
