@@ -6,7 +6,7 @@ const initialState = [];
 // adding and exporting action creators
 
 export const checkStatus = () => ({
-  action: STATUS,
+  type: STATUS,
 });
 
 // adding catagories reducer for handling different actions and exporting it as default
@@ -14,7 +14,7 @@ export const checkStatus = () => ({
 const catagoriesReducer = (state = initialState, action) => {
   switch (action.type) {
     case STATUS:
-      return 'Under construction';
+      return ['Under construction'];
     default:
       return state;
   }

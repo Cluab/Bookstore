@@ -1,28 +1,45 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../../redux/books/books';
 // import PropType for making sure it is string.isRequired
-export default class Book extends PureComponent {
-  render() {
-    const { title, author } = this.props;
-    // using discarding for props
-    return (
-      // return jsx syntax for displaying in html
-      <>
-        <div>
-          <h2>{title}</h2>
-          <p>{author}</p>
-        </div>
-        <div>
-          <button type="button">Remove</button>
-        </div>
+// import dispatch and redux action for hook
 
-      </>
-    );
-  }
-}
+const Book = (props) => {
+  const { title, author, id } = props;
+
+  // using discarding for props
+
+  // add dispatch as a const
+  const dispatch = useDispatch();
+
+  return (
+  // return jsx syntax for displaying in html
+    <div id={id}>
+      <div>
+        <h2>{title}</h2>
+        <p>{author}</p>
+      </div>
+      <div>
+        <button
+          type="button"
+          onClick={() => {
+            dispatch(removeBook(id));
+          }}
+        >
+          Remove
+
+        </button>
+      </div>
+
+    </div>
+  );
+};
 
 // use propTypes to receiving only strings for props.
 Book.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
 };
+export default Book;
