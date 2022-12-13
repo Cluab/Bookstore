@@ -19,6 +19,7 @@ export const addBook = (book) => {
     type: ADD,
     name: book.name,
     author: book.author,
+    key: book.id,
     id: nextTodoId += 1,
   };
   return newBook;
@@ -40,6 +41,7 @@ const booksReducer = (state = initialState, action) => {
           name: action.name,
           author: action.author,
           id: action.id,
+          key: action.key,
         },
       ];
     case REMOVE:
