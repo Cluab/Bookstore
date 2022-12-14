@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../../redux/books/books';
+import { getPosts } from '../../redux/books/posts/postsSlice';
 // import PropType for making sure it is string.isRequired
 // import dispatch and redux action for hook
 
@@ -25,6 +26,7 @@ const Book = (props) => {
           type="button"
           onClick={() => {
             dispatch(removeBook(id));
+            dispatch(getPosts());
           }}
         >
           Remove

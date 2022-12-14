@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../../redux/books/books';
-
+import { getPosts } from '../../redux/books/posts/postsSlice';
 // import dispatch and redux action for hook
 // uuidv4 for generating random id
 
@@ -26,6 +26,7 @@ const Form = () => {
       author: author.value,
       category: 'Fiction',
     };
+    dispatch(getPosts());
     dispatch(addBook(newBook));
     INname.value = '';
     INauthor.value = '';
