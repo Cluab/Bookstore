@@ -1,3 +1,5 @@
+import { createPost, deletePost } from './posts/postsSlice';
+
 const ADD = 'add';
 const REMOVE = 'remove';
 let nextTodoId = -1;
@@ -15,19 +17,19 @@ const initialState = [{
 
 // adding and exporting action creators
 export const addBook = (book) => {
-  const newBook = {
-    type: ADD,
-    name: book.name,
-    author: book.author,
-    key: book.id,
-    id: nextTodoId += 1,
-  };
-  return newBook;
+  createPost(book).then((response) => {
+    console.log(response);
+    return book;
+  });
 };
 
-export const removeBook = (key) => ({
-  type: REMOVE,
-  id: key,
+export const removeBook = (key) => deletePost(key).then((response) => {
+  console.log(response);
+  const remove = {
+    type: REMOVE,
+    id: key,
+  };
+  return remove;
 });
 
 // adding books reducer for handling different actions and exporting it as default

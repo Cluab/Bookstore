@@ -21,9 +21,10 @@ const Form = () => {
       return;
     }
     const newBook = {
-      name: name.value,
+      item_id: uuidv4(),
+      title: name.value,
       author: author.value,
-      id: uuidv4(),
+      category: 'Fiction',
     };
     dispatch(addBook(newBook));
     INname.value = '';
