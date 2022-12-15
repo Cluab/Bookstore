@@ -1,7 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../../redux/books/books';
-import { getPosts } from '../../redux/books/posts/postsSlice';
 // import dispatch and redux action for hook
 // uuidv4 for generating random id
 
@@ -37,7 +36,6 @@ const Form = () => {
       <form onSubmit={(e) => {
         e.preventDefault();
         handleIncremt(INname, INauthor);
-        dispatch(getPosts());
       }}
       >
         <input ref={(node) => { INname = node; }} type="text" placeholder="Book title" />

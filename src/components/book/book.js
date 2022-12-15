@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
-// import { removeBook } from '../../redux/books/books';
+import { removeBook } from '../../redux/books/books';
 import { deleteAction } from '../../redux/books/posts/postsSlice';
 // import PropType for making sure it is string.isRequired
 // import dispatch and redux action for hook
@@ -15,11 +15,11 @@ const Book = (props) => {
   // add dispatch as a const
   const dispatch = useDispatch();
   const filterBooks = () => {
-    if (Object.keys(dataBooks).length === 1) dispatch(deleteAction({}));
-    else {
-      dataBooks = Object.fromEntries(Object.entries(dataBooks).filter(([key]) => key.includes(id)));
-      dispatch(deleteAction(dataBooks));
-    }
+    // if (Object.keys(dataBooks).length === 1) dispatch(deleteAction({}));
+    // else {
+    dataBooks = dataBooks.filter((books) => (books.item_id !== id));
+    dispatch(deleteAction(dataBooks));
+    // }
   };
   return (
   // return jsx syntax for displaying in html
@@ -33,6 +33,7 @@ const Book = (props) => {
           type="button"
           onClick={() => {
             filterBooks(id);
+            dispatch(removeBook(id));
           }}
         >
           Remove

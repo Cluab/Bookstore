@@ -17,12 +17,12 @@ export default function Books() {
   return (
     <>
       <div>
-        {Object.entries(fetchedBooks).map(([key, value]) => (
+        {fetchedBooks.map((key) => (
           <Book
-            key={key}
-            id={key}
-            title={value[0].title}
-            author={value[0].author}
+            key={key.item_id}
+            id={key.item_id}
+            title={key.title}
+            author={key.author}
           />
         ))}
         {books.map((key) => (

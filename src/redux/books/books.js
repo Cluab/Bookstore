@@ -1,4 +1,4 @@
-import { createPost, deletePost } from './posts/postsSlice';
+import { createPost } from './posts/postsSlice';
 
 const ADD = 'add';
 const REMOVE = 'remove';
@@ -19,7 +19,7 @@ export const addBook = (book) => {
 };
 
 export const removeBook = (key) => {
-  deletePost(key);
+  // deletePost(key);
   const remove = {
     type: REMOVE,
     item_id: key,
@@ -28,7 +28,7 @@ export const removeBook = (key) => {
 };
 
 // adding books reducer for handling different actions and exporting it as default
-
+let newState;
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD:
@@ -41,7 +41,9 @@ const booksReducer = (state = initialState, action) => {
         },
       ];
     case REMOVE:
-      return state;
+      newState = state.filter((books) => (books.item_id !== action.item_id));
+      return newState;
+
     default:
       return state;
   }
