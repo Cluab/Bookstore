@@ -1,4 +1,3 @@
-import React from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../../redux/books/books';
@@ -26,7 +25,6 @@ const Form = () => {
       author: author.value,
       category: 'Fiction',
     };
-    dispatch(getPosts());
     dispatch(addBook(newBook));
     INname.value = '';
     INauthor.value = '';
@@ -39,6 +37,7 @@ const Form = () => {
       <form onSubmit={(e) => {
         e.preventDefault();
         handleIncremt(INname, INauthor);
+        dispatch(getPosts());
       }}
       >
         <input ref={(node) => { INname = node; }} type="text" placeholder="Book title" />
