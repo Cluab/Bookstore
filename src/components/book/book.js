@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { removeBook } from '../../redux/books/books';
 import { deleteAction } from '../../redux/books/posts/postsSlice';
+import './book.css';
 // import PropType for making sure it is string.isRequired
 // import dispatch and redux action for hook
 
@@ -24,25 +25,53 @@ const Book = (props) => {
   };
   return (
   // return jsx syntax for displaying in html
-    <div id={id}>
-      <div>
-        <h2>{title}</h2>
-        <p>{author}</p>
+    <li>
+      <div className="book">
+        <div className="book-content">
+          <div className="book-info">
+            <h4 className="book-catagories">Action</h4>
+            <h2 className="book-title" id={id}>{title}</h2>
+            <h6 className="book-author">{author}</h6>
+          </div>
+          <div className="action-buttons">
+            <button className="button-outline" type="button">Comment</button>
+            <span className="divider" />
+            <button
+              className="button-outline"
+              type="button"
+              onClick={() => {
+                filterBooks(id);
+                dispatch(removeBook(id));
+              }}
+            >
+              Remove
+            </button>
+            <span className="divider" />
+            <button className="button-outline" type="button">Edit</button>
+          </div>
+          <div className="progress-container">
+            <div className="circular-progress-container">
+              <div className="circular=progress" />
+            </div>
+            <div className="progress-state">
+              <p className="percentage">0%</p>
+              <p className="completed">Completed</p>
+            </div>
+            <span className="progress-divider" />
+            <div className="current-chapter-container">
+              <div>
+                <p className="chapter-label">CURRENT CHAPTER</p>
+                <p className="chapter">Chapter 17</p>
+              </div>
+              <div>
+                <button className="up-btn" type="button">UPDATE PROGRESS</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        <button
-          type="button"
-          onClick={() => {
-            filterBooks(id);
-            dispatch(removeBook(id));
-          }}
-        >
-          Remove
 
-        </button>
-      </div>
-
-    </div>
+    </li>
   );
 };
 

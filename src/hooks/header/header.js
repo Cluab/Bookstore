@@ -7,13 +7,21 @@ import {
 } from 'react-router-dom';
 import Books from '../books/books';
 import Catagories from '../catagories/catagories';
+import './main.css';
+
 // add navigation and using react router dom to manipulation the pages
 export default function Header() {
   return (
     <Router>
-      <nav>
-        <Link to="/">Books</Link>
-        <Link to="/catagories">Catagories</Link>
+      <nav className="nav-bar">
+        <a className="page-logo" href="#/">Bookstore CMS</a>
+        <ul className="nav-link">
+          <li><Link className="nav-link active-link" to="/">Books</Link></li>
+          <li><Link className="nav-link active-link" to="/catagories">Catagories</Link></li>
+        </ul>
+        <button className="icon-button" type="button">
+          <i className="fa-solid fa-user" />
+        </button>
       </nav>
       <Routes>
         <Route path="/catagories" element={<Catagories />} />
