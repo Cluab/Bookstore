@@ -15,11 +15,8 @@ const Book = (props) => {
   // add dispatch as a const
   const dispatch = useDispatch();
   const filterBooks = () => {
-    // if (Object.keys(dataBooks).length === 1) dispatch(deleteAction({}));
-    // else {
     dataBooks = dataBooks.filter((books) => (books.item_id !== id));
     dispatch(deleteAction(dataBooks));
-    // }
   };
   return (
   // return jsx syntax for displaying in html

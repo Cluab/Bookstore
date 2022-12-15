@@ -1,4 +1,4 @@
-import { createPost } from './posts/postsSlice';
+import { createPost, deletePost } from './posts/postsSlice';
 
 const ADD = 'add';
 const REMOVE = 'remove';
@@ -19,7 +19,7 @@ export const addBook = (book) => {
 };
 
 export const removeBook = (key) => {
-  // deletePost(key);
+  deletePost(key);
   const remove = {
     type: REMOVE,
     item_id: key,
