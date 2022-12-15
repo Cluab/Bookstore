@@ -1,52 +1,50 @@
+import { createPost, deletePost } from './posts/postsSlice';
+// importing create and delete api call for usage in actions
+
 const ADD = 'add';
 const REMOVE = 'remove';
-let nextTodoId = -1;
-const initialState = [{
-  name: 'Atomic habit',
-  author: 'James Clear',
-  id: nextTodoId += 1,
-}, {
-  name: 'How to Win Friends and Influence People',
-  author: 'Dale Carnegie',
-  id: nextTodoId += 1,
-}];
+const initialState = [];
 
 // initializing actions and state
-
 // adding and exporting action creators
 export const addBook = (book) => {
+  createPost(book);
   const newBook = {
     type: ADD,
-    name: book.name,
+    item_id: book.item_id,
+    title: book.title,
     author: book.author,
-    key: book.id,
-    id: nextTodoId += 1,
+    category: 'Fiction',
   };
   return newBook;
 };
 
-export const removeBook = (key) => ({
-  type: REMOVE,
-  id: key,
-});
+export const removeBook = (key) => {
+  deletePost(key);
+  const remove = {
+    type: REMOVE,
+    item_id: key,
+  };
+  return remove;
+};
 
 // adding books reducer for handling different actions and exporting it as default
-
+let newState;
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD:
       return [
         ...state,
         {
-          name: action.name,
+          title: action.title,
           author: action.author,
-          id: action.id,
-          key: action.key,
+          item_id: action.item_id,
         },
       ];
     case REMOVE:
-      return [...state.slice(0, action.id),
-        ...state.slice(action.id + 1)];
+      newState = state.filter((books) => (books.item_id !== action.item_id));
+      return newState;
+
     default:
       return state;
   }

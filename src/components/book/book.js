@@ -1,18 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { removeBook } from '../../redux/books/books';
+import { deleteAction } from '../../redux/books/posts/postsSlice';
 // import PropType for making sure it is string.isRequired
 // import dispatch and redux action for hook
 
 const Book = (props) => {
   const { title, author, id } = props;
 
+  // const fetched books reducer data
+  let dataBooks = useSelector((state) => state.getbooks.list);
+
   // using discarding for props
 
   // add dispatch as a const
   const dispatch = useDispatch();
 
+  // add function for deleting and updating reducer fetched data store
+  const filterBooks = () => {
+    dataBooks = dataBooks.filter((books) => (books.item_id !== id));
+    dispatch(deleteAction(dataBooks));
+  };
   return (
   // return jsx syntax for displaying in html
     <div id={id}>
@@ -24,6 +33,7 @@ const Book = (props) => {
         <button
           type="button"
           onClick={() => {
+            filterBooks(id);
             dispatch(removeBook(id));
           }}
         >
@@ -40,6 +50,6 @@ const Book = (props) => {
 Book.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
 };
 export default Book;
