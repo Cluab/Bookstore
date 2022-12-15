@@ -4,8 +4,7 @@ import booksReducer from './books/books';
 import postsSlice from './books/posts/postsSlice';
 // importing redux required toolkit and deferent reducers
 
-// Combine both reducers into a root reducer by using configureStore function.
-
+// configure different  reducers into a root reducer by using configureStore function.
 const store = configureStore({
   reducer: {
     cat: catagoriesReducer,

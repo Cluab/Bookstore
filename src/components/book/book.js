@@ -8,12 +8,16 @@ import { deleteAction } from '../../redux/books/posts/postsSlice';
 
 const Book = (props) => {
   const { title, author, id } = props;
+
+  // const fetched books reducer data
   let dataBooks = useSelector((state) => state.getbooks.list);
 
   // using discarding for props
 
   // add dispatch as a const
   const dispatch = useDispatch();
+
+  // add function for deleting and updating reducer fetched data store
   const filterBooks = () => {
     dataBooks = dataBooks.filter((books) => (books.item_id !== id));
     dispatch(deleteAction(dataBooks));

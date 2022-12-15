@@ -4,12 +4,15 @@ import Book from '../../components/book/book';
 import Form from '../../components/form/form';
 import { getPosts } from '../../redux/books/posts/postsSlice';
 // adding the main books page and importing its components for use
-// importing useSelectors for using the stored data
+// importing useSelectors for using the stored data ands redux action calls
 
 export default function Books() {
-  // consting the data so we can loop though its content
+  // consting local data from store so we can loop though its content
   const books = useSelector((state) => state.books);
+  // consting fetched data from store so we can loop though its content
   const fetchedBooks = useSelector((state) => state.getbooks.list);
+
+  // making api call for fetching data when screen is only reloaded
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getPosts());

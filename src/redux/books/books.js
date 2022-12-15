@@ -1,4 +1,5 @@
 import { createPost, deletePost } from './posts/postsSlice';
+// importing create and delete api call for usage in actions
 
 const ADD = 'add';
 const REMOVE = 'remove';
