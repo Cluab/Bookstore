@@ -25,29 +25,29 @@ const Book = (props) => {
   };
   return (
   // return jsx syntax for displaying in html
-    <li>
+    <li className="styNone">
       <div className="book">
         <div className="book-content">
           <div className="book-info">
             <h4 className="book-catagories">Action</h4>
             <h2 className="book-title" id={id}>{title}</h2>
             <h6 className="book-author">{author}</h6>
-          </div>
-          <div className="action-buttons">
-            <button className="button-outline" type="button">Comment</button>
-            <span className="divider" />
-            <button
-              className="button-outline"
-              type="button"
-              onClick={() => {
-                filterBooks(id);
-                dispatch(removeBook(id));
-              }}
-            >
-              Remove
-            </button>
-            <span className="divider" />
-            <button className="button-outline" type="button">Edit</button>
+            <div className="action-buttons">
+              <button className="button-outline" type="button">Comment</button>
+              <div className="divider" />
+              <button
+                className="button-outline"
+                type="button"
+                onClick={() => {
+                  filterBooks(id);
+                  dispatch(removeBook(id));
+                }}
+              >
+                Remove
+              </button>
+              <div className="divider" />
+              <button className="button-outline" type="button">Edit</button>
+            </div>
           </div>
           <div className="progress-container">
             <div className="circular-progress-container">
@@ -64,7 +64,7 @@ const Book = (props) => {
                 <p className="chapter">Chapter 17</p>
               </div>
               <div>
-                <button className="up-btn" type="button">UPDATE PROGRESS</button>
+                <button className="primary-button" type="button">UPDATE PROGRESS</button>
               </div>
             </div>
           </div>
