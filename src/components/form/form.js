@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../../redux/books/books';
+import './form.css';
 // import dispatch and redux action for hook
 // uuidv4 for generating random id
 
@@ -32,15 +33,22 @@ const Form = () => {
   return (
   // return jsx syntax for displaying in html
     <>
-      <h3>ADD NEW BOOk</h3>
-      <form onSubmit={(e) => {
-        e.preventDefault();
-        handleIncremt(INname, INauthor);
-      }}
+      <h3 className="form-title">ADD NEW BOOK</h3>
+      <form
+        className="add-form"
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleIncremt(INname, INauthor);
+        }}
       >
-        <input ref={(node) => { INname = node; }} type="text" placeholder="Book title" />
-        <input ref={(node) => { INauthor = node; }} type="text" placeholder="author" />
-        <button type="submit" onClick={() => { handleIncremt(); }}>ADD BOOK</button>
+        <input className="input form-input" ref={(node) => { INname = node; }} type="text" placeholder="Book title" />
+        <input className="input form-input" ref={(node) => { INauthor = node; }} type="text" placeholder="author" />
+        <select name="input category-input" className="category-input">
+          <option className="option" value="Action">Action</option>
+          <option className="option" value="Science Fiction">Science Fiction</option>
+          <option className="option" value="Economy">Economy</option>
+        </select>
+        <button className="primary-button-big" type="submit" onClick={() => { handleIncremt(); }}>ADD BOOK</button>
       </form>
     </>
   );
