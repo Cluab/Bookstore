@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { checkStatus } from '../../redux/catagories/catagories';
+import './catagories.css';
 // adding Catagories page for use
 // importing useSelectore for using the stored data
 // import dispatch and redux action for hook
@@ -12,8 +13,9 @@ export default function Catagories() {
   // consting dispatch to be used in click event
   const dispatch = useDispatch();
   return (
-    <>
+    <div className="status-container">
       <button
+        className="status-btn"
         type="button"
         onClick={(e) => {
           e.preventDefault();
@@ -23,7 +25,7 @@ export default function Catagories() {
         Check status
 
       </button>
-      <p>{status}</p>
-    </>
+      <h1 className="status">{status}</h1>
+    </div>
   );
 }
