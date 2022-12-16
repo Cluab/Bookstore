@@ -15,9 +15,9 @@ export default function Header() {
     <Router>
       <nav className="nav-bar">
         <a className="page-logo" href="#/">Bookstore CMS</a>
-        <ul className="nav-link">
-          <li><Link className="nav-link active-link" to="/">Books</Link></li>
-          <li><Link className="nav-link active-link" to="/catagories">Catagories</Link></li>
+        <ul className="nav-links">
+          <li><Link className="nav-link active-link" to="/">BOOKS</Link></li>
+          <li><Link className="nav-link active-link" to="/catagories">CATAGORIES</Link></li>
         </ul>
         <button className="icon-button" type="button">
           <i className="fa-solid fa-user" />

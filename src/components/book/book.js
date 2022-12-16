@@ -33,7 +33,7 @@ const Book = (props) => {
             <h2 className="book-title" id={id}>{title}</h2>
             <h6 className="book-author">{author}</h6>
             <div className="action-buttons">
-              <button className="button-outline" type="button">Comment</button>
+              <button className="button-outline" type="button">Comments</button>
               <div className="vertical-divider" />
               <button
                 className="button-outline"

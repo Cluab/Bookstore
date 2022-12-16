@@ -21,7 +21,7 @@ export default function Books() {
   return (
     <div className="container">
       <div>
-        <ul>
+        <ul className="books">
           {fetchedBooks.map((key) => (
             <Book
               key={key.item_id}
