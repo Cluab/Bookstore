@@ -33,7 +33,7 @@ const Form = () => {
   return (
   // return jsx syntax for displaying in html
     <>
-      <h3 className="form-title">ADD NEW BOOk</h3>
+      <h3 className="form-title">ADD NEW BOOK</h3>
       <form
         className="add-form"
         onSubmit={(e) => {
@@ -41,8 +41,13 @@ const Form = () => {
           handleIncremt(INname, INauthor);
         }}
       >
-        <input className="input" ref={(node) => { INname = node; }} type="text" placeholder="Book title" />
-        <input className="input" ref={(node) => { INauthor = node; }} type="text" placeholder="author" />
+        <input className="input form-input" ref={(node) => { INname = node; }} type="text" placeholder="Book title" />
+        <input className="input form-input" ref={(node) => { INauthor = node; }} type="text" placeholder="author" />
+        <select name="input category-input" className="category-input">
+          <option className="option" value="Action">Action</option>
+          <option className="option" value="Science Fiction">Science Fiction</option>
+          <option className="option" value="Economy">Economy</option>
+        </select>
         <button className="primary-button-big" type="submit" onClick={() => { handleIncremt(); }}>ADD BOOK</button>
       </form>
     </>

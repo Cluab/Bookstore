@@ -39,7 +39,7 @@ export default function Books() {
             />
           ))}
         </ul>
-        <span className="divider" />
+        <div className="divider" />
         <section><Form /></section>
       </div>
     </div>

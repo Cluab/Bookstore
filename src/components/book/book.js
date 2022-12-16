@@ -29,12 +29,12 @@ const Book = (props) => {
       <div className="book">
         <div className="book-content">
           <div className="book-info">
-            <h4 className="book-catagories">Action</h4>
+            <h4 className="book-category">Action</h4>
             <h2 className="book-title" id={id}>{title}</h2>
             <h6 className="book-author">{author}</h6>
             <div className="action-buttons">
               <button className="button-outline" type="button">Comment</button>
-              <div className="divider" />
+              <div className="vertical-divider" />
               <button
                 className="button-outline"
                 type="button"
@@ -45,16 +45,16 @@ const Book = (props) => {
               >
                 Remove
               </button>
-              <div className="divider" />
+              <div className="vertical-divider" />
               <button className="button-outline" type="button">Edit</button>
             </div>
           </div>
           <div className="progress-container">
             <div className="circular-progress-container">
-              <div className="circular=progress" />
+              <div className="circular-progress" />
             </div>
             <div className="progress-state">
-              <p className="percentage">0%</p>
+              <p className="percent-complete">75%</p>
               <p className="completed">Completed</p>
             </div>
             <span className="progress-divider" />
