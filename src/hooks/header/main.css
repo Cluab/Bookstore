@@ -1,69 +1,71 @@
 body {
-    background-color: rgb(245, 246, 250);
-    padding: 4%;
-    display: block;
+  background-color: rgb(245, 246, 250);
+  padding: 4%;
+  display: block;
 }
 
 #root {
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 60px 0px;
-    background-color: rgb(250, 250, 250);
-    margin: 0px;
-    padding: 0px 0px 8%;
-    border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 0 60px 0;
+  background-color: rgb(250, 250, 250);
+  margin: 0;
+  padding: 0 0 8%;
+  border-radius: 4px;
 }
 
 a {
-    text-decoration: none;
-    cursor: pointer;
+  text-decoration: none;
+  cursor: pointer;
 }
+
 .nav-bar {
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    align-items: center;
-    padding: 24px 4%;
-    border-bottom: 1px solid rgb(232, 232, 232);
-    gap: 40px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  padding: 24px 4%;
+  border-bottom: 1px solid rgb(232, 232, 232);
+  gap: 40px;
 }
+
 .page-logo {
-        font-family: Montserrat, sans-serif;
-        font-size: 1.875rem;
-    font-weight: 700;
-        color: rgb(2, 144, 255);
+  font-family: Montserrat, sans-serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: rgb(2, 144, 255);
 }
 
 .nav-links {
-    display: flex;
-    flex-grow: 1;
-    list-style-type: none;
-    gap: 40px;
+  display: flex;
+  flex-grow: 1;
+  list-style-type: none;
+  gap: 40px;
 }
 
 .nav-links li {
-    display: list-item;
-    text-align: -webkit-match-parent;
+  display: list-item;
 }
+
 .nav-link {
-    opacity: 0.5;
-    font-family: Montserrat, sans-serif;
-    font-size: 0.813rem;
-    color: rgb(18, 18, 18);
-    letter-spacing: 1.9px;
+  opacity: 0.5;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.813rem;
+  color: rgb(18, 18, 18);
+  letter-spacing: 1.9px;
 }
 
 .nav-link:focus {
-    opacity: 1;
+  opacity: 1;
 }
 
 .icon-button {
-    cursor: pointer;
-    width: 2.813rem;
-    height: 2.813rem;
-    border-radius: 50%;
-    border: 1px solid #e8e8e8;
-    background-color: #fff;
+  cursor: pointer;
+  width: 2.813rem;
+  height: 2.813rem;
+  border-radius: 50%;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
 }
 
 .fa-user {
-    font-size: 16px;
-    color: rgb(2, 144, 255);
+  font-size: 16px;
+  color: rgb(2, 144, 255);
 }
