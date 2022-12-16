@@ -18,6 +18,7 @@
 }
 
 .category-input {
+  font-family: "Montserrat", sans-serif;
   width: 30%;
   background-color: rgb(255, 255, 255);
   font-size: 1rem;
@@ -39,6 +40,7 @@
 }
 
 .input {
+  font-family: "Montserrat", sans-serif;
   background-color: rgb(255, 255, 255);
   font-size: 1rem;
   letter-spacing: -0.15px;
