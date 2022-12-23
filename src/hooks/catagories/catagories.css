@@ -1,0 +1,31 @@
+.status-container {
+  padding-top: 3rem;
+  padding-left: 3.5rem;
+}
+
+.status-btn {
+  cursor: pointer;
+  width: 10%;
+  background-color: rgb(2, 144, 255);
+  letter-spacing: 0.5px;
+  color: rgb(255, 255, 255);
+  font-size: 0.813rem;
+  font-weight: 700;
+  font-family: "Roboto Slab", serif;
+  padding: 12px;
+  border-radius: 3px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+}
+
+.status {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  font-weight: bold;
+}

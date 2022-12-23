@@ -23,7 +23,7 @@ After you're finished please remove all the comments and instructions!
 -->
 
 <div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
+
   <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
@@ -45,10 +45,8 @@ After you're finished please remove all the comments and instructions!
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
+  <!-- - [Run tests](#run-tests) -->
 - [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -57,48 +55,36 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [Bookstore] <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
+> The Bookstore is a website that allows you to:
 
-**[your_project__name]** is a...
+- Display a list of books.
+- Add a book.
+- Remove a selected book.
+
+ build by using React and Redux.
+
 
 ## 🛠 Built With <a name="built-with"></a>
 
+- Major languages(HTMl, CSS & JAVASCRIPT)
+- Frameworks(Jest)
+- Technologies used(VS code, webpack, Git & Github)
+- Libraries (React-app)
+
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
+> Airbnb
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
+- **[1.Display a list of books.]**
+- **[2.Add a book.]**
+- **[3.Remove a selected book.]**
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -106,9 +92,8 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
 
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [loading](https://math-magicians-uvtl.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -116,63 +101,47 @@ After you're finished please remove all the comments and instructions!
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
-
-To get a local copy up and running, follow these steps.
-
 ### Prerequisites
 
 In order to run this project you need:
 
-<!--
-Example command:
 
-```sh
- gem install rails
-```
- -->
+1- code Editor preferable (VS code).
+
+
+2- gitbash
+
+
+3- github account
+
+3- node.js
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
+1- cd my-folder.
 
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
---->
+2- clone git@github.com:Cluab/Bookstore.git
+
 
 ### Install
 
 Install this project with:
 
-<!--
-Example command:
 
-```sh
-  cd my-project
-  gem install
-```
---->
+1- run in the terminal `npm install`
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
-Example command:
 
-```sh
-  rails server
-```
---->
+1- run in the terminal `npm start`
 
-### Run tests
+<!-- ### Run tests
 
-To run tests, run the following command:
+To run tests, run the following command: -->
 
 <!--
 Example command:
@@ -182,51 +151,24 @@ Example command:
 ```
 --->
 
-### Deployment
 
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
 
-## 👥 Authors <a name="authors"></a>
+## 👥 Authors <a name="Ibrahim Suhail Al-Yousefi"></a>
 
-> Mention all of the collaborators of this project.
+👤 **Ibrahim Suhail Al-Yousefi**
 
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@cluab](https://github.com/Cluab)
+- Twitter: [@cluab122](https://twitter.com/cluab122)
+- LinkedIn: [Ebrahim Al-Yousefi](https://www.linkedin.com/in/ebrahim-al-yousefi-207808237/)
+- Instagram: [@27.i.b](https://www.instagram.com/27.i.b/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FUTURE FEATURES -->
 
-## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
-
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 
@@ -234,7 +176,7 @@ Example:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Cluab/Math-magicians/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -242,9 +184,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
-If you like this project...
+> Give a ⭐️ if you like this project!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -253,24 +193,26 @@ If you like this project...
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 > Give credit to everyone who inspired your codebase.
+> Thanks to the Microverse team for the great curriculum.
+> Thanks to the Code Reviewer(s) for the insightful feedback.
+> A great thanks to My coding partner(s), morning session team, and standup team for their contributions.
+> Hat tip to anyone whose code was used.
 
-I would like to thank...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FAQ (optional) -->
 
-## ❓ FAQ <a name="faq"></a>
+## ❓ FAQ <a name="Ibrahim Suhail Al-Yousefi"></a>
 
-> Add at least 2 questions new developers would ask when they decide to use your project.
 
-- **[Question_1]**
+- **[how was is it created]**
 
-  - [Answer_1]
+  - [it was made using React and redux]
 
-- **[Question_2]**
+- **[at what stage of your career did you start working on it]**
 
-  - [Answer_2]
+  - [in my third module of the Microverse curriculum week 2]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -278,8 +220,7 @@ I would like to thank...
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./License.md) licensed.
 
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
