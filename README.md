@@ -93,7 +93,7 @@ After you're finished please remove all the comments and instructions!
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [loading](https://math-magicians-uvtl.onrender.com)
+- [Demo](https://bookstore-tf4a.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
