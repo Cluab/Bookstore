@@ -12,7 +12,7 @@ export default function Books() {
   // consting fetched data from store so we can loop though its content
   const fetchedBooks = useSelector((state) => state.getbooks.list);
 
-  // making api call for fetching data when screen is only reloaded
+  // making api call for fetching data when screen is reloaded
   return (
     <div className="container">
       <div>
